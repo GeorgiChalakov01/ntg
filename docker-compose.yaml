@@ -1,0 +1,45 @@
+services:
+  backend:
+    image: ntg
+    restart: unless-stopped
+    env_file:
+      - ./vars.env
+    networks:
+      - ntg_net
+      - net
+    ports:
+      - "8080:8080"
+
+
+  # database:
+  #   image: ntg-postgres
+  #   restart: unless-stopped
+  #   env_file:
+  #     - ./vars.env
+  #   networks:
+  #     - ntg_net
+  #   ports:
+  #     - "5432:5432"
+  #   volumes:
+  #     - ./pg_data:/var/lib/postgresql/data
+  #
+  #
+  # objectstorage:
+  #   image: ntg-objectstorage
+  #   restart: unless-stopped
+  #   env_file:
+  #     - ./vars.env
+  #   networks:
+  #     - ntg_net
+  #   ports:
+  #     - "9000:9000"
+  #     - "9001:9001"
+  #   volumes:
+  #     - ./minio_data:/data
+
+
+networks:
+  ntg_net:
+    external: false
+  net:
+    external: true

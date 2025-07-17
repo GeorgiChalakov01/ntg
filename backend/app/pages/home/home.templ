@@ -1,0 +1,22 @@
+package home
+
+import (
+	"github.com/GeorgiChalakov01/ntg/backend/app/pages/base"
+	"github.com/GeorgiChalakov01/ntg/backend/app/pages/home/components/hero"
+)
+
+templ styles() {
+	@hero.Styles()
+}
+
+templ scripts() {
+	@hero.Scripts()
+}
+
+templ homeComponents() {
+	@hero.Hero()
+}
+
+templ Home() {
+	@base.Base("Home", homeComponents(), styles(), scripts())
+}
