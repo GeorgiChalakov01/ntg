@@ -1,0 +1,71 @@
+package base
+
+import (
+)
+
+templ Scripts() {
+  <script>
+    // Scroll animation
+    document.addEventListener('DOMContentLoaded', function() {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, {
+        threshold: 0.1
+      });
+      document.querySelectorAll('.animate-on-scroll').forEach(element => {
+        observer.observe(element);
+      });
+      // Auto-rotate stats numbers
+      const statNumbers = document.querySelectorAll('.stat-number');
+      statNumbers.forEach(number => {
+        const target = parseInt(number.textContent);
+        let current = 0;
+        const increment = target / 50;
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            number.textContent = target;
+            clearInterval(timer);
+          } else {
+            number.textContent = Math.ceil(current);
+          }
+        }, 30);
+      });
+      // Add hover effect for dropdowns on desktop
+      if (window.innerWidth > 992) {
+        const dropdowns = document.querySelectorAll('.dropdown');
+        dropdowns.forEach(dropdown => {
+          dropdown.addEventListener('mouseenter', function() {
+            this.querySelector('.dropdown-menu').classList.add('show');
+          });
+          dropdown.addEventListener('mouseleave', function() {
+            this.querySelector('.dropdown-menu').classList.remove('show');
+          });
+        });
+      }
+      // Ensure quick links are fully visible
+      function adjustQuickLinks() {
+        const quickLinks = document.querySelector('.quick-links');
+        if (quickLinks) {
+          const viewportHeight = window.innerHeight;
+          const headerHeight = 70; // Fixed header height
+          const quickLinksHeight = viewportHeight * 0.2; // 20% of viewport
+          quickLinks.style.height = `${quickLinksHeight}px`;
+          // Adjust carousel height
+          const carousel = document.querySelector('.hero-carousel');
+          if (carousel) {
+            carousel.style.height = `${viewportHeight - headerHeight - quickLinksHeight}px`;
+          }
+        }
+      }
+      // Initial adjustment
+      adjustQuickLinks();
+      // Adjust on window resize
+      window.addEventListener('resize', adjustQuickLinks);
+    });
+  </script>
+}

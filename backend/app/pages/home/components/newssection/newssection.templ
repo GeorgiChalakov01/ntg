@@ -1,0 +1,51 @@
+package newssection
+
+import (
+  "github.com/GeorgiChalakov01/ntg/backend/app/pages/home/components/newsitem"
+)
+
+templ NewsSection() {
+  <section class="section news-section">
+    <div class="container">
+      <div class="section-title animate-on-scroll">
+        <h2>Последни Новини</h2>
+        <p>Бъдете в крак с последните събития в НТГ</p>
+        <a href="#" class="view-all">Виж всички новини <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6">
+          @newsitem.NewsItem(
+            "Старт на новата учебна година",
+            "15 Септември 2023",
+            "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+            "Учениците от НТГ посрещнаха новата учебна година с тържествена церемония.",
+          )
+        </div>
+        <div class="col-lg-3 col-md-6">
+          @newsitem.NewsItem(
+            "Студентски бизнес форум 2023",
+            "10 Септември 2023",
+            "https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+            "Нашите ученици представиха иновативни бизнес идеи пред експерти.",
+          )
+        </div>
+        <div class="col-lg-3 col-md-6">
+          @newsitem.NewsItem(
+            "Спортни успехи",
+            "5 Септември 2023",
+            "https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+            "Нашите баскетболисти спечелиха регионалното първенство.",
+          )
+        </div>
+        <div class="col-lg-3 col-md-6">
+          @newsitem.NewsItem(
+            "Партньорство с водещи фирми",
+            "1 Септември 2023",
+            "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+            "Подписахме споразумение за сътрудничество с глобална компания.",
+          )
+        </div>
+      </div>
+    </div>
+  </section>
+}

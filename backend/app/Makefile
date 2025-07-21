@@ -1,4 +1,5 @@
 BINARY := app
+
 .PHONY: clear compile run
 
 clear:
@@ -10,6 +11,6 @@ compile:
 	@echo "Building binary..."
 	CGO_ENABLED=0 go build -o $(BINARY) .
 
-run: 
+run:
 	@echo "Starting..."
 	go run main.go
