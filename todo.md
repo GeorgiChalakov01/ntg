@@ -1,5 +1,7 @@
 In change the makefile to be like the makefile in the gerasimova businesscard.
 ==================
+The newsitem should be within the newssection and rename the newssection to just news.
+==================
 In the base template directory the styles and scripts for both are in the styles/scripts of the base instead of separated in the footer and navbar directories.
 
 The js/css for all home components are in the base styles/scripts files instead of in the directories of each component.
