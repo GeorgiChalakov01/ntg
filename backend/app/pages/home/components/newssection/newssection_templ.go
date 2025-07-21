@@ -40,7 +40,7 @@ func NewsSection() templ.Component {
 		templ_7745c5c3_Err = newsitem.NewsItem(
 			"Старт на новата учебна година",
 			"15 Септември 2023",
-			"https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+			"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.snexplores.org%2Fwp-content%2Fuploads%2F2023%2F01%2F1440_LL_school-start-times_feat.jpg&f=1&nofb=1&ipt=44bf5b39c00490e65982eee06fe16bfbcb528a1dbbd0b8d6b9971ce47939bb22",
 			"Учениците от НТГ посрещнаха новата учебна година с тържествена церемония.",
 		).Render(ctx, templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
@@ -79,7 +79,7 @@ func NewsSection() templ.Component {
 		templ_7745c5c3_Err = newsitem.NewsItem(
 			"Партньорство с водещи фирми",
 			"1 Септември 2023",
-			"https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+			"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.novum.no%2Frails%2Factive_storage%2Fblobs%2FeyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbFlDIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a2d48cd6345f850d97017516fb5176f23af71668%2Fcompany.jpg&f=1&nofb=1&ipt=add5580beb50edf426f9762fd0732abc757c30ae87b03062d95acfcd81fd5ff0",
 			"Подписахме споразумение за сътрудничество с глобална компания.",
 		).Render(ctx, templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
