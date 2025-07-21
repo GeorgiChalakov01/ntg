@@ -39,7 +39,7 @@ func NewsSection() templ.Component {
 		}
 		templ_7745c5c3_Err = newsitem.NewsItem(
 			"Старт на новата учебна година",
-			"15 Септември 2023",
+			"15 Септември 2025",
 			"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.snexplores.org%2Fwp-content%2Fuploads%2F2023%2F01%2F1440_LL_school-start-times_feat.jpg&f=1&nofb=1&ipt=44bf5b39c00490e65982eee06fe16bfbcb528a1dbbd0b8d6b9971ce47939bb22",
 			"Учениците от НТГ посрещнаха новата учебна година с тържествена церемония.",
 		).Render(ctx, templ_7745c5c3_Buffer)
