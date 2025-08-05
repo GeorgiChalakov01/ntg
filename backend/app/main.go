@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"os"
 
-	aboutus "github.com/GeorgiChalakov01/ntg/backend/app/pages/about_us"
+	aboutus "github.com/GeorgiChalakov01/ntg/backend/app/pages/aboutus"
 	"github.com/GeorgiChalakov01/ntg/backend/app/pages/documents"
 	"github.com/GeorgiChalakov01/ntg/backend/app/pages/home"
 	"github.com/a-h/templ"
