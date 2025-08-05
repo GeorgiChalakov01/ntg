@@ -1,0 +1,65 @@
+package about_us
+
+import (
+)
+
+templ styles() {
+<style>
+    @media (max-width: 768px) {
+        .about-hero h1 {
+            font-size: 2.5rem;
+        }
+
+        .about-hero p {
+            font-size: 1.1rem;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+        }
+
+        .timeline::before {
+            left: 30px;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content,
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: 70px;
+            margin-right: 0;
+            text-align: left;
+        }
+
+        .timeline-year {
+            left: 30px;
+            transform: translateX(-50%);
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .board-info-card {
+            padding: 30px 20px;
+        }
+
+        .cooperation-card {
+            padding: 30px 20px;
+        }
+
+        .contact-info {
+            margin-top: 30px;
+        }
+
+        .contact-item {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 5px;
+        }
+
+        .iban-code {
+            font-size: 0.9rem;
+            word-break: break-all;
+        }
+    }
+</style>
+}

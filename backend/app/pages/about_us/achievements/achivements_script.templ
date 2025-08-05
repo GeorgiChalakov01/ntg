@@ -1,0 +1,53 @@
+package achievements
+
+import (
+)
+
+templ scripts() {
+<script>
+    function animateCounters() {
+        const counters = document.querySelectorAll('.achievement-number');
+
+        counters.forEach(counter => {
+            const target = parseInt(counter.textContent.replace(/\D/g, ''));
+            const duration = 2000;
+            const increment = target / (duration / 16);
+            let current = 0;
+
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+
+                if (counter.textContent.includes('%')) {
+                    counter.textContent = Math.floor(current) + '%';
+                } else if (counter.textContent.includes('+')) {
+                    counter.textContent = Math.floor(current).toLocaleString() + '+';
+                } else {
+                    counter.textContent = Math.floor(current).toLocaleString();
+                }
+            }, 16);
+        });
+    }
+
+    // Animate counters when achievements section comes into view
+    document.addEventListener('DOMContentLoaded', function () {
+        const achievementsSection = document.querySelector('.achievements-section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        if (achievementsSection) {
+            observer.observe(achievementsSection);
+        }
+    });
+
+</script>
+}

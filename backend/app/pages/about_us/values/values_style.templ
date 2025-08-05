@@ -1,0 +1,42 @@
+package values
+
+templ styles() {
+<style>
+    .values-section {
+        background: var(--white);
+    }
+
+    .value-card {
+        text-align: center;
+        padding: 40px 20px;
+        background: var(--light-color);
+        border-radius: 15px;
+        height: 100%;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .value-card:hover {
+        background: var(--primary-color);
+        color: var(--white);
+        transform: translateY(-10px);
+    }
+
+    .value-card .icon {
+        font-size: 3rem;
+        color: var(--primary-color);
+        margin-bottom: 25px;
+        transition: color 0.3s ease;
+    }
+
+    .value-card:hover .icon {
+        color: var(--white);
+    }
+
+    .value-card h4 {
+        margin-bottom: 20px;
+        font-weight: 600;
+    }
+</style>
+}

@@ -1,0 +1,51 @@
+package publicconcil
+
+templ styles(){
+<style>
+    | .public-council-section {
+        background: var(--white);
+    }
+
+    .council-info-card {
+        background: var(--light-color);
+        padding: 50px;
+        border-radius: 20px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .council-info-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 5px;
+        background: var(--gradient-primary);
+    }
+
+    .council-icon {
+        font-size: 4rem;
+        color: var(--primary-color);
+        margin-bottom: 30px;
+    }
+
+    .council-info-card h3 {
+        color: var(--dark-color);
+        margin-bottom: 25px;
+        font-weight: 600;
+    }
+
+    .council-features {
+        margin: 30px 0;
+    }
+
+    .feature-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        font-weight: 500;
+    }
+</style>
+}

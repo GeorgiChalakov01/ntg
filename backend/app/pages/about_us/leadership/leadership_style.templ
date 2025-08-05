@@ -1,0 +1,50 @@
+package leadership
+
+templ styles() {
+<style>
+    .leadership-section {
+        background: var(--light-color);
+    }
+
+    .leader-card {
+        background: var(--white);
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        height: 100%;
+    }
+
+    .leader-card:hover {
+        transform: translateY(-10px);
+    }
+
+    .leader-image {
+        height: 250px;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+
+    .leader-content {
+        padding: 25px;
+    }
+
+    .leader-content h4 {
+        color: var(--dark-color);
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+
+    .leader-content .position {
+        color: var(--primary-color);
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+
+    .leader-content p {
+        color: var(--secondary-color);
+        font-size: 0.95rem;
+    }
+</style>
+}

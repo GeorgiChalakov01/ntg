@@ -1,0 +1,68 @@
+package history
+
+templ styles() {
+<style>
+    .history-section {
+        background: var(--light-color);
+    }
+
+    .timeline {
+        position: relative;
+        padding: 0;
+        list-style: none;
+    }
+
+    .timeline::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 4px;
+        background: var(--gradient-primary);
+        transform: translateX(-50%);
+    }
+
+    .timeline-item {
+        position: relative;
+        margin-bottom: 50px;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content {
+        margin-right: calc(50% + 40px);
+        text-align: right;
+    }
+
+    .timeline-item:nth-child(even) .timeline-content {
+        margin-left: calc(50% + 40px);
+        text-align: left;
+    }
+
+    .timeline-content {
+        background: var(--white);
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        position: relative;
+    }
+
+    .timeline-year {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--primary-color);
+        color: var(--white);
+        padding: 10px 20px;
+        border-radius: 25px;
+        font-weight: 700;
+        font-size: 1.1rem;
+        z-index: 10;
+    }
+
+    .timeline-content h4 {
+        color: var(--primary-color);
+        margin-bottom: 15px;
+        font-weight: 600;
+    }
+</style>
+}
