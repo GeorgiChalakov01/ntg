@@ -1,0 +1,15 @@
+package documents
+
+import (
+	// "github.com/GeorgiChalakov01/ntg/backend/app/pages/base"
+	"github.com/GeorgiChalakov01/ntg/backend/app/pages/documents/components/mock"
+)
+
+templ documentComponents() {
+	@mock.Mock()
+}
+
+templ Documents() {
+	//@base.Base("НТГ - Документи", documentComponents(), styles(), scripts())
+	@documentComponents()
+}
