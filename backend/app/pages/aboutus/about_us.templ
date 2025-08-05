@@ -3,11 +3,33 @@ package aboutus
 import (
 "github.com/GeorgiChalakov01/ntg/backend/app/pages/base"
 "github.com/GeorgiChalakov01/ntg/backend/app/pages/aboutus/hero"
+"github.com/GeorgiChalakov01/ntg/backend/app/pages/aboutus/history"
+"github.com/GeorgiChalakov01/ntg/backend/app/pages/aboutus/leadership"
+"github.com/GeorgiChalakov01/ntg/backend/app/pages/aboutus/values"
+"github.com/GeorgiChalakov01/ntg/backend/app/pages/aboutus/achievements"
+"github.com/GeorgiChalakov01/ntg/backend/app/pages/aboutus/publicconcil"
+"github.com/GeorgiChalakov01/ntg/backend/app/pages/aboutus/schoolboard"
+"github.com/GeorgiChalakov01/ntg/backend/app/pages/aboutus/cooperation"
 )
 
 templ homeComponents() {
 @hero.Hero()
+@history.History()
+@leadership.Leadership()
+@values.Values()
+@achievements.Achievements()
+@publicconcil.Publicconcil()
+@schoolboard.Schoolboard()
+@cooperation.Cooperation()
 }
+
+templ Styles() {
+@hero.Styles()
+@cooperation.Styles()
+@schoolboard.Styles()
+@publicconcil.Styles()
+}
+
 
 templ AboutUs() {
 @base.Base("НТГ - Национална Търговска Гимназия", homeComponents(), Styles(), Scripts())
