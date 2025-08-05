@@ -6,9 +6,9 @@ import (
 )
 
 templ homeComponents() {
-@hero.hero()
+@hero.Hero()
 }
 
 templ AboutUs() {
-@base.Base("НТГ - Национална Търговска Гимназия", homeComponents(), styles(), scripts())
+@base.Base("НТГ - Национална Търговска Гимназия", homeComponents(), Styles(), Scripts())
 }
