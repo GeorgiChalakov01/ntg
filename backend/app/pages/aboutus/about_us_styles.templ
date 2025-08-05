@@ -1,9 +1,17 @@
 package aboutus
 
 import (
+"github.com/GeorgiChalakov01/ntg/backend/app/pages/aboutus/hero"
+"github.com/GeorgiChalakov01/ntg/backend/app/pages/aboutus/cooperation"
+"github.com/GeorgiChalakov01/ntg/backend/app/pages/aboutus/schoolboard"
+"github.com/GeorgiChalakov01/ntg/backend/app/pages/aboutus/publicconcil"
 )
 
 templ Styles() {
+@hero.Styles()
+@cooperation.Styles()
+@schoolboard.Styles()
+@publicconcil.Styles()
 <style>
     @media (max-width: 768px) {
         .about-hero h1 {
