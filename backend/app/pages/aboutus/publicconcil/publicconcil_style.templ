@@ -1,22 +1,21 @@
-package schoolboard
+package publicconcil
 
-templ styles(){
+templ Styles(){
 <style>
-    .school-board-section {
-        background: var(--light-color);
+    | .public-council-section {
+        background: var(--white);
     }
 
-    .board-info-card {
-        background: var(--white);
+    .council-info-card {
+        background: var(--light-color);
         padding: 50px;
         border-radius: 20px;
         text-align: center;
         position: relative;
         overflow: hidden;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     }
 
-    .board-info-card::before {
+    .council-info-card::before {
         content: '';
         position: absolute;
         top: 0;
@@ -26,20 +25,27 @@ templ styles(){
         background: var(--gradient-primary);
     }
 
-    .board-icon {
+    .council-icon {
         font-size: 4rem;
         color: var(--primary-color);
         margin-bottom: 30px;
     }
 
-    .board-info-card h3 {
+    .council-info-card h3 {
         color: var(--dark-color);
         margin-bottom: 25px;
         font-weight: 600;
     }
 
-    .board-features {
+    .council-features {
         margin: 30px 0;
+    }
+
+    .feature-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        font-weight: 500;
     }
 </style>
 }
