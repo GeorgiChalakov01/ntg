@@ -12,7 +12,32 @@ import (
 "github.com/GeorgiChalakov01/ntg/backend/app/pages/aboutus/cooperation"
 )
 
-templ homeComponents() {
+
+templ aboutUsStyles() {
+@Styles()
+@hero.Styles()
+@history.Styles()
+@leadership.Styles()
+@values.Styles()
+@achievements.Styles()
+@publicconcil.Styles()
+@schoolboard.Styles()
+@cooperation.Styles()
+}
+
+templ aboutUsScripts() {
+@Scripts()
+@hero.Scripts()
+@history.Scripts()
+@leadership.Scripts()
+@values.Scripts()
+@achievements.Scripts()
+@publicconcil.Scripts()
+@schoolboard.Scripts()
+@cooperation.Scripts()
+}
+
+templ aboutUsComponents() {
 @hero.Hero()
 @history.History()
 @leadership.Leadership()
@@ -25,5 +50,5 @@ templ homeComponents() {
 
 
 templ AboutUs() {
-@base.Base("НТГ - Национална Търговска Гимназия", homeComponents(), Styles(), Scripts())
+@base.Base("НТГ - За Нас", aboutUsComponents(), aboutUsStyles(), aboutUsScripts())
 }

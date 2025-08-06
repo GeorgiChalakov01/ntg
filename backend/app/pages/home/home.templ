@@ -1,24 +1,24 @@
 package home
 
 import (
-  "github.com/GeorgiChalakov01/ntg/backend/app/pages/base"
-  "github.com/GeorgiChalakov01/ntg/backend/app/pages/home/components/hero"
-  "github.com/GeorgiChalakov01/ntg/backend/app/pages/home/components/quicklinks"
-  "github.com/GeorgiChalakov01/ntg/backend/app/pages/home/components/newssection"
-  "github.com/GeorgiChalakov01/ntg/backend/app/pages/home/components/virtualtour"
-  "github.com/GeorgiChalakov01/ntg/backend/app/pages/home/components/statistics"
-  "github.com/GeorgiChalakov01/ntg/backend/app/pages/home/components/donors"
+"github.com/GeorgiChalakov01/ntg/backend/app/pages/base"
+"github.com/GeorgiChalakov01/ntg/backend/app/pages/home/components/hero"
+"github.com/GeorgiChalakov01/ntg/backend/app/pages/home/components/quicklinks"
+"github.com/GeorgiChalakov01/ntg/backend/app/pages/home/components/newssection"
+"github.com/GeorgiChalakov01/ntg/backend/app/pages/home/components/virtualtour"
+"github.com/GeorgiChalakov01/ntg/backend/app/pages/home/components/statistics"
+"github.com/GeorgiChalakov01/ntg/backend/app/pages/home/components/donors"
 )
 
 templ homeComponents() {
-  @hero.Hero()
-  @quicklinks.QuickLinks()
-  @newssection.NewsSection()
-  @virtualtour.VirtualTour()
-  @statistics.Statistics()
-  @donors.Donors()
+@hero.Hero()
+@quicklinks.QuickLinks()
+@newssection.NewsSection()
+@virtualtour.VirtualTour()
+@statistics.Statistics()
+@donors.Donors()
 }
 
 templ Home() {
-  @base.Base("НТГ - Национална Търговска Гимназия", homeComponents(), styles(), scripts())
+@base.Base("НТГ - Национална Търговска Гимназия", homeComponents(), styles(), scripts())
 }
