@@ -9,7 +9,7 @@ import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
 import (
-	// "github.com/GeorgiChalakov01/ntg/backend/app/pages/base"
+	"github.com/GeorgiChalakov01/ntg/backend/app/pages/base"
 	"github.com/GeorgiChalakov01/ntg/backend/app/pages/documents/components/mock"
 )
 
@@ -63,7 +63,7 @@ func Documents() templ.Component {
 			templ_7745c5c3_Var2 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = documentComponents().Render(ctx, templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = base.Base("НТГ - Документи", documentComponents(), styles(), scripts()).Render(ctx, templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
