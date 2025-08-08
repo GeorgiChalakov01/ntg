@@ -7,6 +7,7 @@ import (
 
 	"github.com/GeorgiChalakov01/ntg/backend/app/pages/aboutus"
 	"github.com/GeorgiChalakov01/ntg/backend/app/pages/documents"
+	"github.com/GeorgiChalakov01/ntg/backend/app/pages/documents/components/mock"
 	"github.com/GeorgiChalakov01/ntg/backend/app/pages/home"
 	"github.com/a-h/templ"
 )
@@ -26,6 +27,9 @@ func main() {
 	})
 	http.HandleFunc("/documents", func(w http.ResponseWriter, r *http.Request) {
 		templ.Handler(documents.Documents()).ServeHTTP(w, r)
+	})
+	http.HandleFunc("/documents2", func(w http.ResponseWriter, r *http.Request) {
+		templ.Handler(mock.Mock2()).ServeHTTP(w, r)
 	})
 
 	port := os.Getenv("BACKEND_PORT")
