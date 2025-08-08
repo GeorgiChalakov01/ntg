@@ -5,10 +5,18 @@ import (
 	"github.com/GeorgiChalakov01/ntg/backend/app/pages/documents/components/mock"
 )
 
+templ documentStyles() {
+	@mock.Styles()
+}
+
+templ documentScripts() {
+	@mock.Scripts()
+}
+
 templ documentComponents() {
 	@mock.Mock()
 }
 
 templ Documents() {
-	@base.Base("НТГ - Документи", documentComponents(), styles(), scripts())
+	@base.Base("НТГ - Документи", documentComponents(), documentStyles(), documentScripts())
 }
