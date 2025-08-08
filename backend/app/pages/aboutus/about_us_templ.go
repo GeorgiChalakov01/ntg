@@ -9,12 +9,12 @@ import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
 import (
-	"github.com/GeorgiChalakov01/ntg/backend/app/pages/aboutus/achievements"
 	"github.com/GeorgiChalakov01/ntg/backend/app/pages/aboutus/cooperation"
 	"github.com/GeorgiChalakov01/ntg/backend/app/pages/aboutus/hero"
 	"github.com/GeorgiChalakov01/ntg/backend/app/pages/aboutus/history"
 	"github.com/GeorgiChalakov01/ntg/backend/app/pages/aboutus/leadership"
 	"github.com/GeorgiChalakov01/ntg/backend/app/pages/aboutus/publicconcil"
+	"github.com/GeorgiChalakov01/ntg/backend/app/pages/aboutus/qualifications"
 	"github.com/GeorgiChalakov01/ntg/backend/app/pages/aboutus/schoolboard"
 	"github.com/GeorgiChalakov01/ntg/backend/app/pages/aboutus/values"
 	"github.com/GeorgiChalakov01/ntg/backend/app/pages/base"
@@ -57,11 +57,11 @@ func aboutUsStyles() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = values.Styles().Render(ctx, templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = qualifications.Styles().Render(ctx, templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = achievements.Styles().Render(ctx, templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = values.Styles().Render(ctx, templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -118,11 +118,11 @@ func aboutUsScripts() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = values.Scripts().Render(ctx, templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = qualifications.Scripts().Render(ctx, templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = achievements.Scripts().Render(ctx, templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = values.Scripts().Render(ctx, templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -175,11 +175,11 @@ func aboutUsComponents() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = values.Values().Render(ctx, templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = qualifications.Qualifications().Render(ctx, templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = achievements.Achievements().Render(ctx, templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = values.Values().Render(ctx, templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

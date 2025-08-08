@@ -6,46 +6,45 @@ import (
 "github.com/GeorgiChalakov01/ntg/backend/app/pages/aboutus/history"
 "github.com/GeorgiChalakov01/ntg/backend/app/pages/aboutus/leadership"
 "github.com/GeorgiChalakov01/ntg/backend/app/pages/aboutus/values"
-"github.com/GeorgiChalakov01/ntg/backend/app/pages/aboutus/achievements"
+"github.com/GeorgiChalakov01/ntg/backend/app/pages/aboutus/qualifications"
 "github.com/GeorgiChalakov01/ntg/backend/app/pages/aboutus/publicconcil"
 "github.com/GeorgiChalakov01/ntg/backend/app/pages/aboutus/schoolboard"
 "github.com/GeorgiChalakov01/ntg/backend/app/pages/aboutus/cooperation"
 )
 
-
 templ aboutUsStyles() {
-@Styles()
-@hero.Styles()
-@history.Styles()
-@leadership.Styles()
-@values.Styles()
-@achievements.Styles()
-@publicconcil.Styles()
-@schoolboard.Styles()
-@cooperation.Styles()
+  @Styles()
+  @hero.Styles()
+  @history.Styles()
+  @leadership.Styles()
+  @qualifications.Styles()
+  @values.Styles()
+  @publicconcil.Styles()
+  @schoolboard.Styles()
+  @cooperation.Styles()
 }
 
 templ aboutUsScripts() {
-@Scripts()
-@hero.Scripts()
-@history.Scripts()
-@leadership.Scripts()
-@values.Scripts()
-@achievements.Scripts()
-@publicconcil.Scripts()
-@schoolboard.Scripts()
-@cooperation.Scripts()
+  @Scripts()
+  @hero.Scripts()
+  @history.Scripts()
+  @leadership.Scripts()
+  @qualifications.Scripts()
+  @values.Scripts()
+  @publicconcil.Scripts()
+  @schoolboard.Scripts()
+  @cooperation.Scripts()
 }
 
 templ aboutUsComponents() {
-@hero.Hero()
-@history.History()
-@leadership.Leadership()
-@values.Values()
-@achievements.Achievements()
-@publicconcil.Publicconcil()
-@schoolboard.Schoolboard()
-@cooperation.Cooperation()
+  @hero.Hero()
+  @history.History()
+  @leadership.Leadership()
+  @qualifications.Qualifications()
+  @values.Values()
+  @publicconcil.Publicconcil()
+  @schoolboard.Schoolboard()
+  @cooperation.Cooperation()
 }
 
 

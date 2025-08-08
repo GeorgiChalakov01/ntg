@@ -1,0 +1,33 @@
+package qualifications
+
+templ Scripts() {
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Animate progress bars when they come into view
+        const progressObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const card = entry.target;
+                    card.classList.add('animate-progress');
+                    
+                    // Animate the progress bars inside this card
+                    const progressBars = card.querySelectorAll('.progress-bar');
+                    progressBars.forEach((bar, index) => {
+                        setTimeout(() => {
+                            const percentage = bar.getAttribute('data-percentage');
+                            bar.style.width = percentage + '%';
+                        }, index * 200);
+                    });
+                    
+                    progressObserver.unobserve(card);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        // Observe qualification category cards
+        document.querySelectorAll('.qualification-category-card').forEach(card => {
+            progressObserver.observe(card);
+        });
+    });
+</script>
+}
