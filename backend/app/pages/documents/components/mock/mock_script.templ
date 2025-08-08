@@ -48,12 +48,10 @@ templ Scripts() {
         });
 
         // Search functionality
-        const searchInput = document.querySelector('.document-filter input[type="text"]');
         const categorySelect = document.querySelector('.document-filter select:nth-of-type(1)');
         const yearSelect = document.querySelector('.document-filter select:nth-of-type(2)');
 
         function filterDocuments() {
-            const searchTerm = searchInput ? searchInput.value.toLowerCase() : '';
             const selectedCategory = categorySelect ? categorySelect.value : '';
             const selectedYear = yearSelect ? yearSelect.value : '';
 
@@ -64,10 +62,9 @@ templ Scripts() {
                 const description = card.querySelector('.document-description')?.textContent.toLowerCase() || '';
                 const category = card.closest('.document-category')?.querySelector('.category-title')?.textContent.toLowerCase() || '';
                 
-                const matchesSearch = !searchTerm || title.includes(searchTerm) || description.includes(searchTerm);
                 const matchesCategory = !selectedCategory || selectedCategory === 'Всички категории' || category.includes(selectedCategory.toLowerCase());
                 
-                if (matchesSearch && matchesCategory) {
+                if (matchesCategory) {
                     card.style.display = 'block';
                     card.parentElement.style.display = 'block';
                 } else {
@@ -86,11 +83,6 @@ templ Scripts() {
                 }
             });
         }
-
-        if (searchInput) {
-            searchInput.addEventListener('input', filterDocuments);
-        }
-        
         if (categorySelect) {
             categorySelect.addEventListener('change', filterDocuments);
         }
@@ -98,13 +90,7 @@ templ Scripts() {
         if (yearSelect) {
             yearSelect.addEventListener('change', filterDocuments);
         }
-
-        // Search button functionality
-        const searchButton = document.querySelector('.document-filter .btn-outline-danger');
-        if (searchButton) {
-            searchButton.addEventListener('click', filterDocuments);
-        }
-
+        
         // Enhanced document card interactions
         const documentCards = document.querySelectorAll('.document-card');
         
